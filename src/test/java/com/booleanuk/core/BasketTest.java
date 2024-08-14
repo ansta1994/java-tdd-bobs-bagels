@@ -41,7 +41,15 @@ class BasketTest {
         Basket basket = new Basket();
         basket.add("Plane");
         basket.add("Sesame");
-        boolean remove = basket.remove("Nutella");
-        Assertions.assertFalse(remove);
+        Assertions.assertFalse(basket.remove("Nutella"));
+    }
+
+    @Test
+    public void basketIsFullTest() {
+        Basket basket = new Basket();
+        for (int i = 0; i < 7; i++) {
+            basket.add("Sesame");
+        }
+        Assertions.assertFalse(basket.add("Plane"));
     }
 }

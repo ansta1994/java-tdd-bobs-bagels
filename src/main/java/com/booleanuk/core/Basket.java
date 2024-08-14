@@ -9,7 +9,7 @@ public class Basket {
 
     public Basket() {
         this.basket = new ArrayList<>();
-        this.maxCapBasket = 5;
+        this.maxCapBasket = 6;
     }
 
     public boolean add(String product) {
@@ -20,5 +20,15 @@ public class Basket {
     public boolean remove(String product) {
         basket.remove(product);
         return basket.contains(product);
+    }
+
+    public boolean changeCapBasket(int currentCapBasket, int newCapBasket) {
+        if (currentCapBasket == 0) {
+            this.maxCapBasket = newCapBasket;
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }

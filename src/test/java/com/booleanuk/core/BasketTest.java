@@ -34,4 +34,14 @@ class BasketTest {
         }
         Assertions.assertEquals(6, basket.checkBasket());
     }
+
+    // Try remove bagel that does not exist
+    @Test
+    public void tryRemoveBagelThatDoesNotExistTest() {
+        Basket basket = new Basket();
+        basket.add("Plane");
+        basket.add("Sesame");
+        boolean remove = basket.remove("Nutella");
+        Assertions.assertFalse(remove);
+    }
 }

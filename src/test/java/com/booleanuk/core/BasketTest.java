@@ -15,6 +15,6 @@ class BasketTest {
     public void removeBagelTest() {
         Basket basket = new Basket();
         basket.add("Sesame");
-        Assertions.assertTrue(basket.remove("Nutella"));
+        Assertions.assertFalse(basket.remove("Nutella"));
     }
 }

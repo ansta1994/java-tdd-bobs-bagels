@@ -16,4 +16,9 @@ public class Basket {
         basket.add(product);
         return basket.contains(product);
     }
+
+    public boolean remove(String product) {
+        basket.remove(product);
+        return basket.contains(product);
+    }
 }

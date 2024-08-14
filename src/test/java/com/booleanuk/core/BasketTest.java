@@ -17,4 +17,11 @@ class BasketTest {
         basket.add("Sesame");
         Assertions.assertFalse(basket.remove("Nutella"));
     }
+
+    @Test
+    public void changeCapBasketTest() {
+        Basket basket = new Basket();
+        Assertions.assertTrue(basket.changeCapBasket(0, 6));
+        Assertions.assertFalse(basket.changeCapBasket(1, 1));
+    }
 }

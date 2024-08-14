@@ -13,6 +13,9 @@ public class Basket {
     }
 
     public boolean add(String product) {
+        if (checkBasket() >= maxCapBasket) {
+            return false;
+        }
         basket.add(product);
         return basket.contains(product);
     }
@@ -30,5 +33,9 @@ public class Basket {
         else {
             return false;
         }
+    }
+
+    public int checkBasket() {
+        return basket.size();
     }
 }

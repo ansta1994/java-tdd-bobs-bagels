@@ -24,4 +24,10 @@ class BasketTest {
         Assertions.assertTrue(basket.changeCapBasket(0, 6));
         Assertions.assertFalse(basket.changeCapBasket(1, 1));
     }
+
+    @Test
+    public void checkBasketTest() {
+        Basket basket = new Basket();
+        Assertions.assertTrue(basket.checkBasket());
+    }
 }

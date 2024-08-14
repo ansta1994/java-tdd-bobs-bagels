@@ -6,5 +6,8 @@
 |          |                                          | `remove (String)`                    | Product will be removed        | true    |
 |          |                                          |                                      | Product will not be removed    | false   |
 |          |                                          |                                      | If a product does not exist    | Error   |
+|          |                                          | `checkBasket()`                      | If basket has space            | true    |
+|          |                                          |                                      | If basket is full              | false   |
 |          | `int maxCapBasket, int currentCapBasket` | `changeCapBasket (int newCapBasket)` | If newCapBasket is more than 0 | true    |
 |          |                                          |                                      | If newCapBasket is less than 1 | false   |
+|          |                                          |                                      |                                |         |

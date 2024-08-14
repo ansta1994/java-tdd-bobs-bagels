@@ -28,6 +28,10 @@ class BasketTest {
     @Test
     public void checkBasketTest() {
         Basket basket = new Basket();
-        Assertions.assertTrue(basket.checkBasket());
+        Assertions.assertEquals(0, basket.checkBasket());
+        for (int i = 0; i < 7; i++) {
+            basket.add("Sesame");
+        }
+        Assertions.assertEquals(6, basket.checkBasket());
     }
 }
